@@ -8,7 +8,7 @@ class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        with open("C:/Users/Anton/OneDrive/OneHundredDaysOfCodePython/data/data.txt") as data:
+        with open("data.txt") as data:
             self.high_score = int(data.read())
         self.color('white')
         self.penup()
@@ -17,7 +17,7 @@ class Scoreboard(Turtle):
         self.update_scoreboard()
 
     def update_high_score(self):
-        with open("C:/Users/Anton/OneDrive/OneHundredDaysOfCodePython/data/data.txt", mode="w") as file:
+        with open("data.txt", mode="w") as file:
             file.write(f'{self.high_score}')
 
     def update_scoreboard(self):
